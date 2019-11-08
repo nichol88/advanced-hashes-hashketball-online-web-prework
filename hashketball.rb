@@ -149,14 +149,11 @@ end
 
 def get_all_players(game) #returns AoH's of all players in the game
   result = []
-
     game.each { |home_or_away, team|
       team[:players].each { |player_hash|
         result.push(player_hash)
       }
     }
-
-
   #puts "All player hashes: #{result}"
   result
 end
@@ -252,14 +249,17 @@ end
 
 def get_team_total(team)
   t = get_team(team, game_hash)
-  
   team_total = t[:players].reduce(0){ |sum, player|
-    #puts "Player: #{player[:player_name]}"
     sum = sum + player[:points]
-    #puts "Sum for team: #{sum}, #{val[:team_name]}"
     sum
   }
-
-  puts "Team total for #{team}: #{team_total}"
   team_total
+end
+
+def player_with_longest_name
+  players = get_all_players(game_hash)
+  players.reduce(0){ |memo, player|
+    if player[:player_name].length > memo
+      memo = player
+  }
 end
