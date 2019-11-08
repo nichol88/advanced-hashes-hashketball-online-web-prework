@@ -268,4 +268,5 @@ def get_team_total(team)
     #puts "Sum for team: #{sum}, #{val[:team_name]}"
     sum
   }
+}
 end
