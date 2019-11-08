@@ -252,14 +252,14 @@ end
 
 def get_team_total(team)
   t = get_team(team, game_hash)
-  t.each{ |key, val|
-  team_total = val[:players].reduce(0){ |sum, player|
+  
+  team_total = t[:players].reduce(0){ |sum, player|
     #puts "Player: #{player[:player_name]}"
     sum = sum + player[:points]
     #puts "Sum for team: #{sum}, #{val[:team_name]}"
     sum
   }
-  }
+
   puts "Team total for #{team}: #{team_total}"
   team_total
 end
