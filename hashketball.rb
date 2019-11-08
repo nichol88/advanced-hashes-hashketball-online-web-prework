@@ -260,3 +260,5 @@ def get_teams
     result.push(value)
   }
 end
+
+def get_team_total(team)
