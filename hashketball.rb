@@ -263,7 +263,7 @@ def player_with_longest_name
     puts "Memo: #{memo}"
     puts "Player: #{player}"
     puts "Comparing #{player[:player_name]} and #{memo[:player_name]}"
-    if player[:player_name].to_s.length > memo[:player_name].to_s.length
+    if player[:player_name].length > memo[:player_name].length
 
       memo = player
     end
