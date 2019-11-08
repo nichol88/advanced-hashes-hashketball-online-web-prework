@@ -282,5 +282,9 @@ def most_steals
   players.reduce{ |memo, player|
     if memo == nil
       memo = player
+    end
+    if player[:steals] > memo[:steals]
+      memo = player
+    end
   }
 end
