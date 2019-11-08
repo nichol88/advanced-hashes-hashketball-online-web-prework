@@ -259,7 +259,7 @@ end
 def player_with_longest_name
   players = get_all_players(game_hash)
   #puts "Players: #{players}"
-  players.reduce(0){ |memo, player|
+  players.reduce(){ |memo, player|
     puts "Memo: #{memo}"
     puts "Player: #{player}"
     puts "Comparing #{player[:player_name]} and #{memo[:player_name]}"
