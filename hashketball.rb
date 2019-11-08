@@ -277,7 +277,7 @@ def long_name_steals_a_ton?
 
   puts "longest name = #{long_name}"
   puts "most steals: #{steals}"
-  if long_name[:player_name] == steals[:player_name]
+  if long_name == steals
     return true
   end
   false
