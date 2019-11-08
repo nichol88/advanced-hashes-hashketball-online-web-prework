@@ -247,7 +247,7 @@ def winning_team
       if total > max
         max = total
       end
-
+      key.to_s
     }
     max
 end
