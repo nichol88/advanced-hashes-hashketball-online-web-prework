@@ -262,6 +262,6 @@ def player_with_longest_name
     if player[:player_name].length > memo
       memo = player
     end
-    player
+    memo
   }
 end
