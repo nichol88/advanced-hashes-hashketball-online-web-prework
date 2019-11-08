@@ -260,5 +260,6 @@ def get_team_total(team)
     sum
   }
   }
+  puts "Team total for #{team}: #{team_total}"
   team_total
 end
