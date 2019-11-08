@@ -268,5 +268,5 @@ def player_with_longest_name
       memo = player
     end
     memo
-  }.to_s
+  }[:player_name].to_s
 end
