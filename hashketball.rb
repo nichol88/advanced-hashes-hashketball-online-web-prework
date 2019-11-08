@@ -234,27 +234,12 @@ def most_points_scored
 end
 
 def winning_team
-    game_hash.reduce(){ |memo, val|
-
-      total = val[:players].reduce(0){ |sum, player|
-        #puts "Player: #{player[:player_name]}"
-        sum = sum + player[:points]
-        #puts "Sum for team: #{sum}, #{val[:team_name]}"
-        sum
-      }
-      puts "Total for #{val[:team_name]}: #{total}"
-
-      if total > max
-        max = key
-      end
-      max.to_s
-    }
 
 end
 
 def get_teams
-  result = []
-  game_hash.each{ |team, value|
+
+  game_hash.map{ |team, value|
     result.push(value)
   }
 end
