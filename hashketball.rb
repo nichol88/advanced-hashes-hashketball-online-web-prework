@@ -249,7 +249,7 @@ def winning_team
       end
       key.to_s
     }
-    max
+    
 end
 
 def get_teams
