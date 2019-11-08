@@ -234,7 +234,7 @@ def most_points_scored
 end
 
 def winning_team
-
+  max = 0
     game_hash.each{ |key, val|
 
       total = val[:players].reduce(0){ |sum, player|
@@ -245,9 +245,11 @@ def winning_team
       }
 
       puts "Total for #{val[:team_name]}: #{total}"
-      total
+      if total > max
+        max = total
+      end
     }
-
+    max
 end
 
 def get_teams
