@@ -286,5 +286,6 @@ def most_steals
     if player[:steals] > memo[:steals]
       memo = player
     end
+    memo
   }
 end
