@@ -235,7 +235,7 @@ end
 
 def winning_team
     game_hash.reduce(0){ |max, (key,val)|
-
+      puts max
       total = val[:players].reduce(0){ |sum, player|
         #puts "Player: #{player[:player_name]}"
         sum = sum + player[:points]
@@ -249,7 +249,7 @@ def winning_team
       end
       key.to_s
     }
-    
+
 end
 
 def get_teams
