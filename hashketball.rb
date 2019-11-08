@@ -270,3 +270,7 @@ def player_with_longest_name
     memo
   }[:player_name].to_s
 end
+
+def long_name_steals_a_ton?
+  long_name = player_with_longest_name
+end
