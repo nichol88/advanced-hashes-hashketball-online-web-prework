@@ -238,9 +238,9 @@ def winning_team
     game_hash.each{ |key, val|
 
       total = val[:players].reduce(0){ |sum, player|
-        puts "Player: #{player[:player_name]}"
+        #puts "Player: #{player[:player_name]}"
         sum = sum + player[:points]
-        puts "Sum for team: #{sum}, #{val[:team_name]}"
+        #puts "Sum for team: #{sum}, #{val[:team_name]}"
         sum
       }
 
