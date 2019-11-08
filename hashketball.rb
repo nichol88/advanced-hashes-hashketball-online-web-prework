@@ -273,4 +273,14 @@ end
 
 def long_name_steals_a_ton?
   long_name = player_with_longest_name
+
+
+end
+
+def most_steals
+  players = get_all_players(game_hash)
+  players.reduce{ |memo, player|
+    if memo == nil
+      memo = player
+  }
 end
